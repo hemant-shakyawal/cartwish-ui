@@ -14,6 +14,14 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 ## Code scaffolding
 
+The init command simplifies setting up husky in a project. It creates a pre-commit script in .husky/ and updates the prepare script in package.json. Modifications can be made later to suit your workflow.
+
+```bash
+npx husky init
+```
+
+## Code scaffolding
+
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
 ```bash
