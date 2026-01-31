@@ -22,7 +22,7 @@ export const routes: Routes = [
 
     // ADMIN/DASHBOARD LAYOUT
     {
-        path: 'admin',
+        path: 'dashboard',
         component: Dashboard,
         children: [
             {
