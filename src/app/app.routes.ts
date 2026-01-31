@@ -1,12 +1,14 @@
 import { Routes } from '@angular/router';
 import { Layout } from './shared/components/layout/layout';
 import { Login } from './components/login/login';
+import { dateTimestampProvider } from 'rxjs/internal/scheduler/dateTimestampProvider';
+import { Dashboard } from './components/dashboard/dashboard';
 
 export const routes: Routes = [
 
-      { path: 'login', component: Login },
+    { path: 'login', component: Login },
 
-       {
+    {
         path: '',
         component: Layout,
         children: [
@@ -17,6 +19,11 @@ export const routes: Routes = [
             },
             { path: '', redirectTo: 'home', pathMatch: 'full' },
         ],
+    },
+
+    {
+        path: 'dashboard',
+        component: Dashboard,
     },
 
     // Fallback

@@ -1,0 +1,64 @@
+<mat-toolbar color="primary" class="header">
+    <button mat-icon-button (click)="toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Cartwish Admin</span>
+    <span class="spacer"></span>
+    <!-- RIGHT ICONS -->
+    <button mat-icon-button>
+        <mat-icon>notifications</mat-icon>
+    </button>
+
+    <button mat-icon-button>
+        <mat-icon>mail</mat-icon>
+    </button>
+
+    <button mat-icon-button>
+        <mat-icon>brightness_6</mat-icon>
+    </button>
+
+    <!-- PROFILE MENU -->
+    <button mat-icon-button [matMenuTriggerFor]="profileMenu" class="avatar-btn">
+
+        <img src="https://i.pravatar.cc/40" class="avatar" alt="User" />
+    </button>
+</mat-toolbar>
+<!-- PROFILE DROPDOWN -->
+<mat-menu #profileMenu="matMenu" class="profile-menu">
+
+
+    <div class="menu-section-title">Settings</div>
+
+    <button mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+    </button>
+
+    <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+    </button>
+
+
+
+
+    <mat-divider></mat-divider>
+
+
+    <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+    </button>
+
+</mat-menu>
+<mat-sidenav-container class="container">
+    <mat-sidenav mode="side" class="sidenav" [opened]="isExpanded()">
+        <app-sidebarnav></app-sidebarnav>
+    </mat-sidenav>
+
+
+
+    <mat-sidenav-content class="content">
+        <router-outlet />
+    </mat-sidenav-content>
+</mat-sidenav-container>
