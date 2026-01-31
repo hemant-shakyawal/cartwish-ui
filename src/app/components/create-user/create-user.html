@@ -1,0 +1,55 @@
+<mat-card class="create-user-card">
+
+    <mat-card-title>Create User</mat-card-title>
+
+    <form [formGroup]="createUserFormGroup" (ngSubmit)="onSubmit()">
+
+        <!-- Name -->
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" />
+            <mat-error *ngIf="createUserFormGroup.controls.name.touched && createUserFormGroup.controls.name.invalid">
+                Name must be at least 3 characters
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Email -->
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" />
+            <mat-error *ngIf="createUserFormGroup.controls.email.touched && createUserFormGroup.controls.email.invalid">
+                Enter a valid email
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Password -->
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" />
+            <mat-error
+                *ngIf="createUserFormGroup.controls.password.touched && createUserFormGroup.controls.password.invalid">
+                Password must be at least 8 characters
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Address -->
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Delivery Address</mat-label>
+            <textarea matInput rows="3" formControlName="deliveryAddress"></textarea>
+            <mat-error
+                *ngIf="createUserFormGroup.controls.deliveryAddress.touched && createUserFormGroup.controls.deliveryAddress.invalid">
+                Delivery Address must be at least 8 characters
+            </mat-error>
+        </mat-form-field>
+
+
+
+        <!-- Actions -->
+        <div class="actions">
+            <button mat-raised-button color="primary" type="submit" [disabled]="isLoading()">
+              Create User
+            </button>
+        </div>
+
+    </form>
+</mat-card>

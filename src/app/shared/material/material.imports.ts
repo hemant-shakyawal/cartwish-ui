@@ -6,11 +6,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
 import { MatMenuModule } from '@angular/material/menu';
-
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 export const MATERIAL_IMPORTS = [
     MatButtonModule,
@@ -24,4 +23,5 @@ export const MATERIAL_IMPORTS = [
     MatMenuModule,
     MatBadgeModule,
     MatDividerModule,
+    MatExpansionModule,
 ];
