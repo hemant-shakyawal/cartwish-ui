@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideRouter } from '@angular/router'; // Import the provider
 import { Sidebarnav } from './sidebarnav';
 
 describe('Sidebarnav', () => {
@@ -8,13 +8,15 @@ describe('Sidebarnav', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Sidebarnav]
+      imports: [Sidebarnav],
+      // Add this to satisfy any routerLink directives in your HTML
+      providers: [provideRouter([])] 
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(Sidebarnav);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges(); 
   });
 
   it('should create', () => {

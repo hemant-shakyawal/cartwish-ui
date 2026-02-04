@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideRouter } from '@angular/router'; // 1. Import this
 import { Dashboard } from './dashboard';
 
 describe('Dashboard', () => {
@@ -8,13 +8,15 @@ describe('Dashboard', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Dashboard]
+      imports: [Dashboard],
+      // 2. Provide a mock or empty route configuration
+      providers: [provideRouter([])] 
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(Dashboard);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges(); // Use detectChanges() to trigger lifecycle hooks
   });
 
   it('should create', () => {

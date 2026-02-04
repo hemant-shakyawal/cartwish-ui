@@ -3,7 +3,7 @@
         <!-- MAIN SECTION -->
         <div class="nav-section-title">Main</div>
 
-        <a mat-list-item routerLink="/admin" routerLinkActive="active" class="nav-item">
+        <a mat-list-item routerLink="/dashboard" routerLinkActive="active" class="nav-item">
             <mat-icon matListItemIcon class="nav-icon">dashboard</mat-icon>
             <span matListItemTitle>Dashboard</span>
         </a>
@@ -24,8 +24,8 @@
                 <span class="sub-menu">Create User</span>
             </a>
 
-            <a mat-list-item routerLink="/dashboard/user-profile" routerLinkActive="active" class="sub-nav-item">
-                <mat-icon matListItemIcon class="nav-icon">list_alt</mat-icon>
+            <a mat-list-item routerLink="/dashboard/user-details" routerLinkActive="active">
+                <mat-icon matListItemIcon>list_alt</mat-icon>
                 <span class="sub-menu">User Details</span>
             </a>
         </mat-expansion-panel>
@@ -38,12 +38,12 @@
                 <mat-icon class="expand-icon">expand_more</mat-icon>
             </mat-expansion-panel-header>
 
-            <a mat-list-item routerLink="/admin/category-list" routerLinkActive="active" class="sub-nav-item">
+            <a mat-list-item routerLink="/dashboard/category-details" routerLinkActive="active" class="sub-nav-item">
                 <mat-icon matListItemIcon class="nav-icon">list</mat-icon>
                 <span class="sub-menu">All Category</span>
             </a>
 
-            <a mat-list-item routerLink="/admin/category-add" routerLinkActive="active" class="sub-nav-item">
+            <a mat-list-item routerLink="/dashboard/category-add" routerLinkActive="active" class="sub-nav-item">
                 <mat-icon matListItemIcon class="nav-icon">add_circle</mat-icon>
                 <span class="sub-menu">Add Category</span>
             </a>
@@ -56,35 +56,14 @@
                 <mat-icon class="expand-icon">expand_more</mat-icon>
             </mat-expansion-panel-header>
 
-            <a mat-list-item routerLink="/admin/product-list" routerLinkActive="active" class="sub-nav-item">
+            <a mat-list-item routerLink="/dashboard/product-list" routerLinkActive="active" class="sub-nav-item">
                 <mat-icon matListItemIcon class="nav-icon">list</mat-icon>
                 <span class="sub-menu">All Products</span>
             </a>
 
-            <a mat-list-item routerLink="/admin/product-add" routerLinkActive="active" class="sub-nav-item">
+            <a mat-list-item routerLink="/dashboard/product-add" routerLinkActive="active" class="sub-nav-item">
                 <mat-icon matListItemIcon class="nav-icon">add_circle</mat-icon>
                 <span class="sub-menu">Add Product</span>
-            </a>
-        </mat-expansion-panel>
-
-
-
-        <!-- ORDERS MENU (EXPANDABLE) -->
-        <mat-expansion-panel class="sidebar-expansion" hideToggle>
-            <mat-expansion-panel-header class="expansion-header">
-                <mat-icon matListItemIcon class="nav-icon">shopping_bag</mat-icon>
-                <span class="menu-title">Orders</span>
-                <mat-icon class="expand-icon">expand-more</mat-icon>
-            </mat-expansion-panel-header>
-
-            <a mat-list-item routerLink="/admin/order-list" routerLinkActive="active" class="sub-nav-item">
-                <mat-icon matListItemIcon class="nav-icon">receipt_long</mat-icon>
-                <span class="sub-menu">All Orders</span>
-            </a>
-
-            <a mat-list-item routerLink="/admin/order-pending" routerLinkActive="active" class="sub-nav-item">
-                <mat-icon matListItemIcon class="nav-icon">pending_actions</mat-icon>
-                <span class="sub-menu">Pending Orders</span>
             </a>
         </mat-expansion-panel>
 

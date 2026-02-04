@@ -10,6 +10,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
 
 export const MATERIAL_IMPORTS = [
     MatButtonModule,
@@ -24,4 +25,5 @@ export const MATERIAL_IMPORTS = [
     MatBadgeModule,
     MatDividerModule,
     MatExpansionModule,
+    MatTableModule
 ];

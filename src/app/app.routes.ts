@@ -32,33 +32,27 @@ export const routes: Routes = [
                 loadComponent: () => import('./components/create-user/create-user').then(c => c.CreateUser),
             },
             {
-                path: 'user-profile',
-                loadComponent: () => import('./components/create-user/create-user').then(c => c.CreateUser), // placeholder
+                path: 'user-details',
+                loadComponent: () => import('./components/users-details/users-details').then(c => c.UsersDetails),
             },
-            {
-                path: 'category-list',
-                loadComponent: () => import('./components/create-user/create-user').then(c => c.CreateUser), // placeholder
-            },
+
             {
                 path: 'category-add',
-                loadComponent: () => import('./components/create-user/create-user').then(c => c.CreateUser), // placeholder
+                loadComponent: () => import('./components/create-category/create-category').then(c => c.CreateCategory), // placeholder
             },
             {
-                path: 'product-list',
-                loadComponent: () => import('./components/create-user/create-user').then(c => c.CreateUser), // placeholder
+                path: 'category-details',
+                loadComponent: () => import('./components/category-details/category-details').then(c => c.CategoryDetails), // placeholder
             },
             {
                 path: 'product-add',
-                loadComponent: () => import('./components/create-user/create-user').then(c => c.CreateUser), // placeholder
+                loadComponent: () => import('./components/create-product/create-product').then(c => c.CreateProduct), // placeholder
             },
             {
-                path: 'order-list',
-                loadComponent: () => import('./components/create-user/create-user').then(c => c.CreateUser), // placeholder
+                path: 'product-list',
+                loadComponent: () => import('./components/product-details/product-details').then(c => c.ProductDetails), // placeholder
             },
-            {
-                path: 'order-pending',
-                loadComponent: () => import('./components/create-user/create-user').then(c => c.CreateUser), // placeholder
-            },
+
             { path: '', redirectTo: 'create-user', pathMatch: 'full' },
         ]
     },
